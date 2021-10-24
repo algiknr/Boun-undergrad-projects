@@ -1,4 +1,4 @@
-# CmpE240 - Digital Systems
+# CMPE 240 - Digital Systems
 
 
 **Course Catalog Description:**
