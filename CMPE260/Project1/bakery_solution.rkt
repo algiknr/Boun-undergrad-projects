@@ -1,28 +1,6 @@
 #lang scheme
 ;2016400123
 ;ALGI KANAR
-
-(define BAKERIES '(
-                   (hasanpasa 50 (borek corek kurabiye))
-                   (aynali 60 (pogaca kek simit))
-                   (istinye 70 (kepekli simit portakalli))
-                   (sariyer 80 ( ))))
-
-(define HOTELS '(
-                 (hilton(hasanpasa istinye)(borek portakalli))
-                 (conrad(aynali istinye) (simit kepekli))
-                 (hyatt(aynali sariyer) (simit pogaca))
-                 (marmara ( )( ))))
-( define GOODS'(
-                (borek hasanpasa 12)
-                (corek hasanpasa 4)
-                (kurabiye hasanpasa 15)
-                (pogaca aynali 3)
-                (kek aynali 5)
-                (simit aynali 2)
-                (kepekli istinye 6)
-                (simit istinye 3)
-                (portakalli istinye 3)))
 ;-------------------------------------------------------------------------
 
 ;I divide the function into two.DELIVERY-COST is sending necessary information to deliverycost2.
@@ -40,9 +18,6 @@
 
 (define (DELIVERY-COST b)
   (deliverycost2 b BAKERIES (length BAKERIES)))
-
-(DELIVERY-COST 'sariyer)
-(display " ")
 ;-------------------------------------------------------------------------
 
 ;I divide the function into two.GOODS-AVAILABLE is sending necessary information to goodsavailable2.
@@ -60,8 +35,6 @@
 
 (define (GOODS-AVAILABLE b)
   (goodsavailable2 b BAKERIES (length BAKERIES)))
-
-(GOODS-AVAILABLE 'aynali)
 ;-------------------------------------------------------------------------
 
 ;I divide the function into two.GOODS-INTERESTED is sending necessary information to goodsinterested2.
@@ -79,8 +52,6 @@
 
 (define (GOODS-INTERESTED h)
   (goodsinterested2 h HOTELS (length HOTELS)))
-
-(GOODS-INTERESTED 'conrad)
 ;-------------------------------------------------------------------------
 
 ;I divide the function into two.AGREED-BAKERIES is sending necessary information to agreedbakeries2.
@@ -98,8 +69,6 @@
 
 (define (AGREED-BAKERIES h)
   (agreedbakeries2 h HOTELS (length HOTELS)))
-
-(AGREED-BAKERIES 'conrad)
 ;-------------------------------------------------------------------------
 
 ;member function is used for to understand whether a certain element resides in a list and it returns a boolean according to the answer.
@@ -137,8 +106,6 @@
 
 (define (AGREED-HOTELS b)
   (agreedhotels2 b HOTELS (length HOTELS) '()))
-
-(AGREED-HOTELS 'istinye)
 ;-------------------------------------------------------------------------
 
 ;I divide the function into two.BOUGHT-BY is sending necessary information to boughtby2 and it is initializing an empty list in order to fill it with matching hotels.
@@ -155,13 +122,10 @@
  
 (define (BOUGHT-BY g)
   (boughtby2 g HOTELS (length HOTELS) '()))
-
-(BOUGHT-BY 'kepekli)
-(display " ")
 ;-------------------------------------------------------------------------
 
 ;8 definitions under this comment are same with their above conterparts.Since I'm using display in functions,I redefined them
-;and slightly changed their names in order to avoid any unnecessary display when using them in the last 3 main functions.
+;and slightly changed their names in order to avoid any unnecessary display when using them in the last 4 main functions.
 
 (define (goodsavailableB y bake len)
   (if (eqv? len 0)
@@ -222,9 +186,6 @@
 
 (define (BEST-PRICE g)
   (bestprice2 g GOODS (length GOODS) '()))
-
-(BEST-PRICE 'kepekli)
-(display " ")
 ;-------------------------------------------------------
 
 ;I divide the function into three.TOTAL-COST-GOOD is sending the necessary info and an emty list.In totalcost2 if the hotel we give doesn't need the good
@@ -250,9 +211,6 @@
 
 (define (TOTAL-COST-GOOD h g)
   (totalcost2 g h HOTELS '()))
-
-(TOTAL-COST-GOOD 'conrad 'simit)
- (display " ")
 ;-------------------------------------------------------------------------
 
 ;TOTAL-COST-LIST is implementing the same principles used in TOTAL-COST-GOOD.Only difference is that
@@ -285,9 +243,6 @@
 
 (define(TOTAL-COST-LIST h)
   (totalcostlist2 h (length(Goods-InterestedA h))(Goods-InterestedA h) 0))
-  
- (TOTAL-COST-LIST 'conrad)
-(display " ")
 ;-------------------------------------------------------------------------
 
 ;I divide the function into three.WITHIN-BUDGET will control whether the numbers given are ordered from min to max.If it is,it will go to withinbuget2.
@@ -313,7 +268,4 @@
 
 (define (WITHIN-BUDGET mi ma) 
    (if(> mi ma)(display "Wrong ordered arguments!")(withinbudget2 mi ma '())))
-
-(WITHIN-BUDGET 7 8)
-(display " ")
 ;-----------------------------------FIN----------------------------------------------
