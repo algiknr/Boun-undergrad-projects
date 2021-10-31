@@ -1,11 +1,4 @@
-# CMPE250_2018Fall_Project1
-CMPE250 2018Fall Project1
-
-Due date: 24.10.2017 23:59
-
-Please check out Project1.pdf for description of the project.
-
-Due date is a strict due date!
+# CMPE250_Project1
 
 How to compile
 In a terminal, call commands:
