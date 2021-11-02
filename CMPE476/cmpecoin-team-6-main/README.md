@@ -1,1 +1,0 @@
-# cmpecoin-team-6
