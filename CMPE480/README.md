@@ -11,6 +11,6 @@ and natural language understanding. Exercises in an artificial intelligence lang
 **Instructor : EMRE UĞUR**
 
 
-### [HW-1](/CMPE493/Assignment_1) `Python`
-### [HW-2](/CMPE493/Assignment_2) `Prolog`
-### [HW-3](/CMPE493/Assignment_2) `Python`
+### [HW-1](/CMPE480/HW-1) `Python`
+### [HW-2](/CMPE480/HW-2) `Prolog`
+### [HW-3](/CMPE480/HW-3) `Python`
